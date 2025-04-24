@@ -47,7 +47,7 @@ public class CadastroProdutoPage extends BasePage {
     @FindBy( linkText = "google")
     private WebElement linkGoogle;
 
-    @FindBy( linkText = "GZH")
+    @FindBy( linkText = "GZH Empresas")
     private WebElement linkGZH;
 
     public CadastroProdutoPage(WebDriver driver){
@@ -74,6 +74,12 @@ public class CadastroProdutoPage extends BasePage {
         return this;
     }
 
+    public CadastroProdutoPage selecionarCategoria(int posicao){
+        Select select = new Select( selCategoriaProduto );
+        select.selectByIndex( posicao );
+        return this;
+    }
+
     public CadastroProdutoPage selecionarCanalVenda
             (String canal1, String canal2, String canal3 ){
         Select select = new Select( selCanalVenda );
@@ -88,6 +94,13 @@ public class CadastroProdutoPage extends BasePage {
         select.selectByIndex( canal1 );
         select.selectByIndex( canal2 );
         select.selectByIndex( canal3 );
+        return this;
+    }
+
+    public CadastroProdutoPage selecionarCanalVenda(int canal1, int canal2){
+        Select select = new Select( selCanalVenda );
+        select.selectByIndex( canal1 );
+        select.selectByIndex( canal2 );
         return this;
     }
     public CadastroProdutoPage selecionarVendaImediataSim(){

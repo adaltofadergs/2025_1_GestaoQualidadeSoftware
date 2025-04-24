@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeClass
     public void preCond(){
-        url = System.getProperty("user.id") +
+        url = System.getProperty("user.dir") +
                 "\\src\\main\\resources\\paginaDeTeste.html";
         driver = new EdgeDriver();
         driver.get( url );

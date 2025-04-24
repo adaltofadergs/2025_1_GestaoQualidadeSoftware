@@ -21,7 +21,7 @@
                var checkedFormaVenda = document.getElementsByName('formaVenda')
                for(var i = 0; i < checkedFormaVenda.length; i++) {
                    if(checkedFormaVenda[i].checked == true){
-                   formaVenda  += ' ' + checkedFormaVenda[i].value + ' ';
+                   formaVenda  += ' ' + checkedFormaVenda[i].value;
                    }
                }
 
@@ -38,7 +38,7 @@
                var options = document.getElementById('venda').options;
                for(var i = 0; i < options.length; i++) {
                    if(options[i].selected){
-                       vendas += ' ' + options[i].text + ' ';
+                       vendas += ' ' + options[i].text;
                    }
                }
                var select = document.getElementById('categoria');
@@ -51,7 +51,7 @@
                + "<div id='descMinimo'>Estoque Minimo: " + document.getElementById('txt02').value + "</div>"
                + "<div id='descMaxima'>Estoque Máximo:" + estoqueMaximo + "</div>"
                + "<div id='descMinimo'>Disponibilizar para venda imediata?: " + vendaImediata + "</div>"
-               + "<div id='descMinimo'>Formas de Venda: " + formaVenda + "</div>";
+               + "<div id='descMinimo'>Formas de Venda:" + formaVenda + "</div>";
 
 
        }
